@@ -7,7 +7,7 @@ const DETAILS_URL = process.env.DETAILS_URL || "http://localhost:3002"
 const deps = require("./package.json").dependencies
 module.exports = (_, argv) => ({
 	output: {
-		publicPath: DETAILS_URL
+		publicPath: `${DETAILS_URL}/`
 	},
 
 	resolve: {
