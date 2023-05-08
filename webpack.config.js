@@ -3,10 +3,11 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 require("dotenv").config()
 const HOST_URL = process.env.HOST_URL || "http://localhost:8080"
+const DETAILS_URL = process.env.DETAILS_URL || "http://localhost:3002"
 const deps = require("./package.json").dependencies
 module.exports = (_, argv) => ({
 	output: {
-		publicPath: "http://localhost:3002/"
+		publicPath: DETAILS_URL
 	},
 
 	resolve: {
