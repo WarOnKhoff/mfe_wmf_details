@@ -85,8 +85,7 @@ const Details = () => {
 		if (selectedCity) {
 			fetchWeatherData(selectedCity).then((data) => {
 				if (selectedOption === "cards") {
-					const fiveDaysForecast = [...data.forecast.forecastday].splice(0, 5)
-					console.log("fiveDaysForecast", fiveDaysForecast)
+					const fiveDaysForecast = [...data.forecast.forecastday].splice(0, 4)
 					setDays(fiveDaysForecast)
 				} else {
 					setDays(data.forecast.forecastday)
